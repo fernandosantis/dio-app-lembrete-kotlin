@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         app:navigationIcon="@drawable/ic_back"
-        app:title="Criar Tarefa" />
+        app:title="@string/t_add_task" />
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guide_start"
         android:layout_width="wrap_content"
@@ -26,7 +26,7 @@
         app:layout_constraintGuide_end="32dp"
         />
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/lay_Titulo"
+        android:id="@+id/txt_title"
         app:layout_constraintTop_toBottomOf="@id/toolbar"
         app:layout_constraintStart_toStartOf="@id/guide_start"
         app:layout_constraintEnd_toEndOf="@id/guide_end"
@@ -37,7 +37,6 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         >
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/txt_titulo"
             android:layout_width="match_parent"
             android:inputType="text"
             android:layout_height="wrap_content"
@@ -45,18 +44,16 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/lay_Descricao"
-        app:layout_constraintTop_toBottomOf="@id/lay_Titulo"
+        android:id="@+id/txt_description"
+        app:layout_constraintTop_toBottomOf="@id/txt_title"
         app:layout_constraintStart_toStartOf="@id/guide_start"
         app:layout_constraintEnd_toEndOf="@id/guide_end"
         android:layout_marginTop="16dp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="@string/t_description"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        >
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/txt_descricao"
             android:layout_width="match_parent"
             android:inputType="textMultiLine"
             android:layout_height="120dp"
@@ -64,48 +61,41 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/lay_Data"
-        app:layout_constraintTop_toBottomOf="@id/lay_Descricao"
+        android:id="@+id/txt_date"
+        app:layout_constraintTop_toBottomOf="@id/txt_description"
         app:layout_constraintStart_toStartOf="@id/guide_start"
-        app:layout_constraintEnd_toStartOf="@id/lay_Time"
+        app:layout_constraintEnd_toStartOf="@id/txt_time"
         android:layout_marginTop="16dp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="@string/t_date"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_marginEnd="16dp"
-        app:startIconDrawable="@drawable/ic_data"
-        >
+        android:layout_marginEnd="8dp"
+        app:startIconDrawable="@drawable/ic_data">
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/txt_data"
             android:layout_width="match_parent"
-            android:inputType="date"
+            android:inputType="none"
             android:layout_height="wrap_content"
-            android:focusable="false"
-            />
+            android:focusable="false"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/lay_Time"
-        app:layout_constraintTop_toBottomOf="@id/lay_Descricao"
-        app:layout_constraintStart_toEndOf="@id/lay_Data"
+        android:id="@+id/txt_time"
+        app:layout_constraintTop_toBottomOf="@id/txt_description"
+        app:layout_constraintStart_toEndOf="@id/txt_date"
         app:layout_constraintEnd_toEndOf="@id/guide_end"
         android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="8dp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="@string/t_time"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        app:startIconDrawable="@drawable/ic_time"
-
-        >
+        app:startIconDrawable="@drawable/ic_time">
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/txt_time"
             android:layout_width="match_parent"
-            android:inputType="time"
+            android:inputType="none"
             android:layout_height="wrap_content"
-            android:focusable="false"
-            />
+            android:focusable="false"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
