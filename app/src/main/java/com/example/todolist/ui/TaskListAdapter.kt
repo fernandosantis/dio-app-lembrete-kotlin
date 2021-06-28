@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.todolist.R
 import com.example.todolist.databinding.ItemTaskBinding
+import com.example.todolist.extensions.format
 import com.example.todolist.model.Task
 
 class TaskListAdapter : ListAdapter<Task, TaskListAdapter.TaskViewHolder>(DiffCallback()) {
@@ -30,7 +31,7 @@ class TaskListAdapter : ListAdapter<Task, TaskListAdapter.TaskViewHolder>(DiffCa
     ) : RecyclerView.ViewHolder(binding.root) {
         fun bind(item: Task) {
             binding.txtTitle.text = item.title
-            binding.txtDate.text = item.date
+            binding.txtDate.text = item.date.format()
             binding.txtTime.text = item.time
             binding.cmdDetails.setOnClickListener {
                 showPopup(item)

@@ -5,10 +5,11 @@ import com.example.todolist.model.Task
 object TaskDataSource {
     private val list = arrayListOf<Task>()
 
-    fun getList() = list.toList()
+    fun getList() = list.toList().sortedWith(compareBy({ it.date }, { it.time }))
+    // Ordenando as Tarefas por Date e Hora
 
     fun insertTask(task: Task) {
-        if (task.id == 0 ) {
+        if (task.id == 0) {
             list.add(task.copy(id = list.size + 1))
         } else {
             list.remove(task)
@@ -17,8 +18,9 @@ object TaskDataSource {
     }
 
     fun findById(taskId: Int) = list.find { it.id == taskId }
-    fun deleteTaks(task: Task) {
+    fun deleteTask(task: Task) {
         list.remove(task)
+
     }
 
 }

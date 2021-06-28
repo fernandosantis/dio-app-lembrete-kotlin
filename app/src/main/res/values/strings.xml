@@ -11,4 +11,6 @@
     <string name="t_edit">Editar</string>
     <string name="t_delete">Deletar</string>
     <string name="t_empty_task">Ops! Você não possui nenhuma tarefa</string>
+    <string name="t_EditTask">Editar Tarefa</string>
+    <string name="t_invalid_title">Título Inválido</string>
 </resources>

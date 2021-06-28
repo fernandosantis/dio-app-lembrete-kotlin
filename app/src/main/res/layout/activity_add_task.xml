@@ -9,7 +9,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
-        app:navigationIcon="@drawable/ic_back"
+        app:navigationIcon="@drawable/ic_add"
+        app:navigationIconTint="@color/black"
         app:title="@string/t_add_task" />
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guide_start"
@@ -40,7 +41,8 @@
             android:layout_width="match_parent"
             android:inputType="text"
             android:layout_height="wrap_content"
-            />
+            app:errorEnabled="true"/>
+
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
