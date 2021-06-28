@@ -6,4 +6,9 @@
     <string name="t_time">Horário</string>
     <string name="t_add_task">Criar Tarefa</string>
     <string name="t_cancel">Cancelar</string>
+    <string name="t_tasks">Tarefas</string>
+    <string name="t_NewTask">Nova tarefa</string>
+    <string name="t_edit">Editar</string>
+    <string name="t_delete">Deletar</string>
+    <string name="t_empty_task">Ops! Você não possui nenhuma tarefa</string>
 </resources>
